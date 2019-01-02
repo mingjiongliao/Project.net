@@ -1,4 +1,6 @@
-﻿using System.Windows.Forms;
+﻿using System;
+using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace DaycareRegister
 {
@@ -430,6 +432,30 @@ namespace DaycareRegister
             txt_age.Text = "";
              
              */
+        }
+        //DaycareAdmin abcd123
+        static string sConnectionString = "Persist Security Info=true; Integrated Security=false; database=Daycare; server=MINGJIONGLI7C54; "
+         + "User Id=director;"
+         + "Password=abcd";
+        SqlConnection connection = new SqlConnection(sConnectionString);
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button2_Click(object sender, System.EventArgs e)
+        {
+            try
+            {
+                
+                MessageBox.Show(connection.State.ToString());
+                connection.Open();
+                MessageBox.Show(connection.State.ToString());
+                MessageBox.Show(connection.Database + connection.DataSource);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
         }
     }
 }

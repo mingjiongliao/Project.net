@@ -89,6 +89,7 @@
             this.label_photoWarning = new System.Windows.Forms.Label();
             this.saveTxt = new System.Windows.Forms.SaveFileDialog();
             this.loadTxt = new System.Windows.Forms.OpenFileDialog();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.PhotoBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.fatherBox.SuspendLayout();
@@ -641,12 +642,23 @@
             // 
             this.loadTxt.FileName = "openFileDialog1";
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(713, 61);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 28;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // Child_Registration_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LavenderBlush;
             this.ClientSize = new System.Drawing.Size(936, 628);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.label_photoWarning);
             this.Controls.Add(this.label_warning);
             this.Controls.Add(this.btn_f);
@@ -750,6 +762,7 @@
         private System.Windows.Forms.Label label_photoWarning;
         private System.Windows.Forms.SaveFileDialog saveTxt;
         private System.Windows.Forms.OpenFileDialog loadTxt;
+        private System.Windows.Forms.Button button2;
     }
 }
 
